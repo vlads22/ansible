@@ -1,0 +1,19 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+  
+  # play1 of the playbook
+  - name: install apache and php packages    
+    # generic OS package manager (vs apt , dns)
+    package:
+      name:
+        - "{{ apache_package }}"
+        - "{{ php_package }}"
+      state: latest
+      update_cache: yes
+    
+  
+  
+

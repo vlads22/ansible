@@ -1,0 +1,6 @@
+
+# centos server
+vlad@192.168.178.120 apache_package=httpd php_package=php
+
+# ubuntu server
+vcurtean@192.168.178.126 apache_package=apache2 php_package=libapache2-mod-php

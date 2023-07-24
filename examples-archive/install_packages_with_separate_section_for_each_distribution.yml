@@ -3,22 +3,27 @@
 - hosts: all
   become: true
   tasks:
-
-  # play1 of the playbook
-  - name: install apache and php for Ubuntu
+  
+  # play1 of the playbook: ubuntu section
+  - name: install apache2 and php packages for Ubuntu
     apt:
       name:
         - apache2
         - libapache2-mod-php
       state: latest
+      # update repository index for Ubuntu
       update_cache: yes
     when: ansible_distribution == "Ubuntu"
-
-  - name: install apache and php for CentOS servers
+  
+  # centos section
+  - name: install apache2 and php packages for CentOS
     dnf:
       name:
         - httpd
         - php
       state: latest
+      #  update repository index for CentOS
       update_cache: yes
     when: ansible_distribution == "CentOS"
+  
+

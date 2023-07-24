@@ -1,2 +1,8 @@
+[web_servers]
+
+# centos server
 vlad@192.168.178.120
+
+[db_servers]
+# ubuntu server
 vcurtean@192.168.178.126
